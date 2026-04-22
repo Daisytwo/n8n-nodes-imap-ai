@@ -241,4 +241,4 @@ Open `http://localhost:5678`, create an **IMAP API** credential, add an **IMAP (
 
 ## License
 
-MIT © Dominik / addpv
+MIT
