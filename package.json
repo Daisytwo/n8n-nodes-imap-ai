@@ -1,0 +1,72 @@
+{
+  "name": "n8n-nodes-imap-ai",
+  "version": "0.1.0",
+  "description": "n8n community node for IMAP mailbox access with first-class AI Agent (usableAsTool) support. Read, search, move, flag and download emails from any IMAP server via imapflow + mailparser.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "imap",
+    "imapflow",
+    "email",
+    "mailparser",
+    "ai",
+    "ai-agent",
+    "langchain",
+    "tool"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/addpv/n8n-nodes-imap-ai",
+  "author": {
+    "name": "Dominik / addpv",
+    "email": "noreply@example.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/addpv/n8n-nodes-imap-ai.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=20.15"
+  },
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier \"nodes/**/*.ts\" \"credentials/**/*.ts\" --write",
+    "lint": "eslint \"nodes/**/*.ts\" \"credentials/**/*.ts\" package.json",
+    "lintfix": "eslint \"nodes/**/*.ts\" \"credentials/**/*.ts\" package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/ImapApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Imap/Imap.node.js"
+    ]
+  },
+  "dependencies": {
+    "imapflow": "^1.0.170",
+    "mailparser": "^3.7.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "@types/mailparser": "^3.4.5",
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^5.0.0",
+    "n8n-workflow": "^1.82.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3"
+  }
+}

@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-base.imap",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Communication", "Development", "Productivity"],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/addpv/n8n-nodes-imap-ai#readme"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://github.com/addpv/n8n-nodes-imap-ai#credentials"
+			}
+		]
+	}
+}
